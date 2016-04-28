@@ -10,11 +10,13 @@
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^6.3.6",
+    "browser-sync": "^2.12.5",
     "css-mqpacker": "^4.0.1",
     "cssnano": "^3.5.2",
     "gulp": "^3.9.1",
     "gulp-postcss": "^6.1.0",
     "gulp-size": "^2.1.0",
+    "gulp-watch": "^4.3.5",
     "postcss-css-variables": "^0.5.1",
     "postcss-cssnext": "^2.5.2",
     "postcss-import": "^8.1.0",
