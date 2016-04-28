@@ -19,5 +19,10 @@
     "postcss-cssnext": "^2.5.2",
     "postcss-import": "^8.1.0",
     "precss": "^1.4.0"
+  },
+  "dependencies": {
+    "basscss": "^8.0.1",
+    "basscss-addons": "^1.0.0-beta4",
+    "basscss-basic": "^1.0.0"
   }
 }
