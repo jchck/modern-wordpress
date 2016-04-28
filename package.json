@@ -1,0 +1,14 @@
+{
+  "name": "modern-wp",
+  "version": "1.0.0",
+  "description": "It's 2016, let's WordPress like it",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "WordPress"
+  ],
+  "author": "Justin Chick <hey@justinchick.com>",
+  "license": "MIT"
+}
