@@ -2,7 +2,7 @@
 
 $jchck_includes = [
 	'lib/assets.php',
-	'lib/cleanup.php'
+	'lib/soil.php'
 ];
 
 foreach ($jchck_includes as $file) {

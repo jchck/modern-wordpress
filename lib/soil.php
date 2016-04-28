@@ -1,8 +1,8 @@
 <?php
 
-namespace jchck\cleanup;
+namespace jchck\soil;
 
-function cleanup(){
+function soil(){
 	add_theme_support('soil-clean-up');
 	add_theme_support('soil-nav-walker');
 	add_theme_support('soil-nice-search');
@@ -10,4 +10,4 @@ function cleanup(){
 	add_theme_support('soil-relative-urls');
 }
 
-add_action('after_setup_theme', __NAMESPACE__ . '\\cleanup');
+add_action('after_setup_theme', __NAMESPACE__ . '\\soil');
