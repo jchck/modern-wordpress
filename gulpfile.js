@@ -9,6 +9,12 @@ var mqpacker		= require('css-mqpacker');
 var cssnano			= require('cssnano');
 var size			= require('gulp-size');
 var cssvariables	= require('postcss-css-variables');
+var watch			= require('gulp-watch');
+var browserSync		= require('browser-sync').create();
+var browserReload	= browserSync.reload;
+
+var devURL			= 'http://vagrant.local/wppostcss/'
+
 
 
 // The complete CSS processing task
@@ -39,5 +45,22 @@ gulp.task('css', function(){
 		.pipe(size({gzip: true, showFiles: true, title: 'Processed & gZipped!'}))
 		
 		// Then define where to deliver the end result
-		.pipe(gulp.dest('./dest'));
+		.pipe(gulp.dest('./dest'))
+
+		.pipe(browserSync.stream());
+});
+
+// The gulp watch task
+gulp.task('watch', function(){
+	browserSync.init({
+		files: ['{lib}/**/*.php', '*.php'],
+		proxy: devURL,
+		snippetOptions: {
+			whitelist: ['/wp-admin/admin-ajax.php'],
+			blacklist: ['/wp-admin/**']
+		}
+	});
+
+	gulp.watch('./src/css/*.css', ['css']).on('change', browserSync.reload);
+	gulp.watch('**.php').on('change', browserSync.reload);
 });
