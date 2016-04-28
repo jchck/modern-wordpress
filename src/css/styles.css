@@ -33,3 +33,8 @@
 @import 'basscss-addons/modules/darken';
 @import 'basscss-addons/modules/lighten';
 @import 'basscss-addons/modules/background-images';
+
+/* Theme Specific Variables */
+
+@import '_mq';
+@import '_variables';
