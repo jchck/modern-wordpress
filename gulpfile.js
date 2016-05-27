@@ -2,8 +2,6 @@
 var gulp			= require('gulp');
 var postcss			= require('gulp-postcss');
 var cssnext			= require('postcss-cssnext');
-var precss			= require('precss');
-var autoprefixer	= require('autoprefixer');
 var atImport		= require('postcss-import');
 var mqpacker		= require('css-mqpacker');
 var cssnano			= require('cssnano');
@@ -23,14 +21,14 @@ gulp.task('css', function(){
 	// Define Postcss plugins which we'll pass below
 	var postcssPlugins = [
 		atImport,
-		cssvariables,
-		cssnano,
-		autoprefixer({
-			browsers: ['last 2 versions']
+		cssnext({
+			'browsers' : ['last 2 versions']
 		}),
-		cssnext,
+		cssvariables,
+		cssnano({
+			'autoprefixer' : false
+		}),
 		mqpacker,
-		precss
 	];
 
 	// Steps making up the CSS task
